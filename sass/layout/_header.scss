@@ -1,0 +1,99 @@
+/* ---HEADER--- */
+
+.header {
+    
+    border-bottom: 1px solid var(--header-line-cl);
+  }
+  
+  
+  
+  /* nav__list */
+  
+  .nav {
+    display: flex;
+  }
+  .nav__list {
+    
+    @include list;
+
+    display: flex;
+    margin-left: 93px;
+  }
+  /* Ставимо відступи в навігації між силками окрім першої та останьої */
+  .nav__list .nav__item + .nav__item {
+    margin-left: 50px;
+  }
+  .nav__list .nav__link {
+    /* втсановлюэмо силкам падінги, щоб користувач по ним попадав */
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    color: var(--section-title-text);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.06;
+    letter-spacing: 0.02em;
+  
+    transition: color var(--transition-time-hover) var(--transition-cubic);
+    
+    &:hover,
+    &:focus,
+    &.nav__link--current{
+    color: var(--accent-color);
+    }
+  }
+  // .nav__list .nav__link--current {
+  //   color: var(--accent-color);
+  // }
+  .nav__item {
+    position: relative;
+  }
+  .nav__link--current::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: currentColor;
+  }
+  
+  /* contacts */
+  
+  .contacts {
+    @include list;
+
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+  .contacts .contacts__item + .contacts__item{
+    margin-left: 50px;
+  }
+  .contacts__mail--svg,
+  .contacts__smartphone--svg {
+    text-align: baseline;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  .contacts .contacts__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  
+    transition: color var(--transition-time-hover) var(--transition-cubic), text-shadow var(--transition-time-hover) var(--transition-cubic);
+  
+      &:hover,
+      &:focus {
+    color: var(--accent-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    } 
+  } 

@@ -1,0 +1,123 @@
+/* ---FOOTER---*/
+
+.footer {
+    @extend %section;
+    background-color: var(--hero-footer-bg-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .footer-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .footer-main {
+    display: flex;
+    align-items: baseline;
+  }
+  .footer-logo-addres {
+    margin-right: 70px;
+  }
+
+  /* contacts */
+  
+  .addres-map {
+    line-height: 1.71;
+    color: var(--secondary-text-color);
+    transition: color var(--transition-time-hover) var(--transition-cubic);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
+  }
+  .footer-contacts {
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  .footer-text {
+    margin-bottom: 20px;
+  
+    color: var(--secondary-text-color);
+  
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* social */
+  
+  .footer-social{
+    margin-right: auto;
+  }
+  .footer-list{
+    @include list;
+  }
+  .footer-social-list {
+    
+    @include list;
+
+    display: flex;
+   
+  }
+  .footer-social-link:not(:last-child) {
+    margin-right: 10px;
+  }
+  .footer-social-svg {
+    fill: currentColor;
+  }
+  .footer-social-link {
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--secondary-text-color);
+  
+    transition: background-color var(--transition-time-hover) var(--transition-cubic);
+    
+      &:hover,
+      &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+
+  .footer-social-item:not(:last-child) {
+    margin-right: 10px;
+  }
+ 
+  .mail-subscription-wraper{
+    display: flex;
+    align-items: center;
+    
+  }
+  /* subscription */
+  
+  .user-mail-subscription-input{
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    margin-right: 12px;
+    background-color: var(--hero-footer-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #ffffff;
+  }
+  .footer-form-subsc{
+    display: flex;
+  }
+
+  .user-mail-subscription-input::placeholder {
+  
+  font-size: 16px;
+  line-height: 1,25;
+  
+  color: rgba(255, 255, 255, 0.6);
+  } 
+  
+  
