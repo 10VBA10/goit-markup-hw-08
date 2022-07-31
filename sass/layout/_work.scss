@@ -1,11 +1,14 @@
 /* WORK */
 
 .work {
+  display: none;
 
+  @media screen and (min-width: 1200px) {
+      display: flex;
+      padding-top: 0px;
+      padding-bottom: 94px;
+  }
     @extend %section;
-
-    padding-top: 0px;
-    padding-bottom: 94px;
   }
   .work__title {
     margin-bottom: 50px;

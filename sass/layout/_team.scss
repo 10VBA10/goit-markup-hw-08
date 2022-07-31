@@ -2,8 +2,14 @@
 
 .team {
     @extend %section;
-
-    padding-bottom: 111px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+    // padding-bottom: 111px;
     background-color: var(--section-bg-color);
   }
   .team__title,
@@ -20,9 +26,18 @@
   }
   .team__list {
 
-    ---items: 4;
+    --items: 1;
+        
+    @media screen and (min-width: 768px) {
+        --items: 2;
+    }
+        
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
     text-align: center;
-  }
+}
+    
   .team-social__icons {
     @include list;
 
@@ -31,6 +46,7 @@
   }
   .team-social__item {
     display: block;
+    
   }
   .team-social__item:not(:last-child) {
     margin-right: 10px;

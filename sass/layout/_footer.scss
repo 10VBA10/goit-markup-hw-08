@@ -6,15 +6,52 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+.footer-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+}  
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
   .footer-item:not(:last-child) {
     margin-bottom: 9px;
   }
-  .footer-main {
-    display: flex;
-    align-items: baseline;
-  }
+ 
   .footer-logo-addres {
-    margin-right: 70px;
+    text-align: center;
+
+    margin-bottom: 60px;
+    
+    @media screen and (min-width: 768px) {
+      margin-right: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+      text-align: left;
+  }
   }
 
   /* contacts */
@@ -39,6 +76,8 @@
   }
   .footer-text {
     margin-bottom: 20px;
+
+  text-align: center;
   
     color: var(--secondary-text-color);
   
@@ -49,7 +88,17 @@
   /* social */
   
   .footer-social{
-    margin-right: auto;
+    // margin-right: auto;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-right: 93px;
+    }
   }
   .footer-list{
     @include list;
@@ -57,7 +106,6 @@
   .footer-social-list {
     
     @include list;
-
     display: flex;
    
   }
@@ -86,7 +134,6 @@
     }
   }
 
-
   .footer-social-item:not(:last-child) {
     margin-right: 10px;
   }
@@ -94,12 +141,19 @@
   .mail-subscription-wraper{
     display: flex;
     align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 1200px) {
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
     
   }
   /* subscription */
   
   .user-mail-subscription-input{
-    width: 358px;
+    margin-bottom: 20px;
+    width: 100%;
     height: 50px;
     padding-left: 16px;
     margin-right: 12px;
@@ -109,7 +163,20 @@
     color: #ffffff;
   }
   .footer-form-subsc{
-    display: flex;
+    display: inline-block;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+
+
   }
 
   .user-mail-subscription-input::placeholder {
