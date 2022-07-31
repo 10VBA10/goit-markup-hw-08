@@ -508,7 +508,8 @@ address {
 }
 @media screen and (min-width: 0px) and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (min-width: 0px) and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 0px) and (max-width: 479px) and (min-resolution: 192dpi), screen and (min-width: 0px) and (max-width: 479px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero/hero-img_mob@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-img_mob@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img_mob@2x.jpg);
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -519,7 +520,8 @@ address {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 767px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero/hero-img_mob@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-img_mob@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img_mob@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -531,7 +533,8 @@ address {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero/hero-img_tab@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-img_tab@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img_tab@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -545,7 +548,8 @@ address {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero/hero-img_desk@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-img_desk@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img_desk@2x.jpg);
   }
 }
 
@@ -1132,18 +1136,62 @@ address {
 }
 
 /* ---MAIN---PORTFOLIO */
+.card-set__item {
+  --items: 1;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .card-set__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-set__item {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-set__item {
+    --items: 3;
+  }
+}
+
 .projects-list-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 15px;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  margin-bottom: 40px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
-
-.projects-list-btn .projects-list-item + .projects-list-item {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .projects-list-btn {
+    gap: 8px;
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects-list-btn {
+    gap: 8px;
+    margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .projects-title {
@@ -1361,6 +1409,7 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .mail-subscription-wraper {
@@ -1374,6 +1423,12 @@ address {
 }
 
 /* subscription */
+@media screen and (min-width: 1200px) {
+  .footer-subscription {
+    margin-left: auto;
+  }
+}
+
 .user-mail-subscription-input {
   margin-bottom: 20px;
   width: 100%;
@@ -1384,6 +1439,11 @@ address {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .user-mail-subscription-input {
+    margin-bottom: 0;
+  }
 }
 
 .footer-form-subsc {

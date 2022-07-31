@@ -88,7 +88,7 @@
   /* social */
   
   .footer-social{
-    // margin-right: auto;
+    
     align-items: center;
     justify-content: center;
 
@@ -139,18 +139,25 @@
   }
  
   .mail-subscription-wraper{
+
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+
     @media screen and (min-width: 1200px) {
       align-items: flex-start;
       justify-content: flex-start;
-  }
-
-    
+    }
   }
   /* subscription */
-  
+  .footer-subscription{
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+    }
+    
+    
+  }
   .user-mail-subscription-input{
     margin-bottom: 20px;
     width: 100%;
@@ -161,8 +168,12 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     color: #ffffff;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
   }
   .footer-form-subsc{
+
     display: inline-block;
 
     align-items: center;

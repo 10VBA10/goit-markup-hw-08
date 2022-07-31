@@ -2,13 +2,41 @@
 .projects {
   @extend %section;
 }
-.projects-list-btn {
+.card-set__item{
+  --items: 1;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
   }
-  .projects-list-btn .projects-list-item + .projects-list-item {
-    margin-left: 8px;
+      
+  @media screen and (min-width: 768px) {
+      --items: 2;
+  }
+  
+  @media screen and (min-width: 1200px) {
+      --items: 3;
+  }
+}
+.projects-list-btn {
+  display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 8px;
+    margin-bottom: 40px;
+    justify-content: flex-start;
+
+    @media screen and (min-width: 768px) {
+        gap: 8px;
+        margin-bottom: 30px;
+        justify-content: center;
+    }    
+
+    @media screen and (min-width: 1200px) {
+        gap: 8px;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
   }
   .projects-title {
     margin-bottom: 4px;
