@@ -28,46 +28,84 @@
     <!-- Секція header -->
 
     <header class="header">
-      <div class="nav conteiner">
-        <nav class="nav">
-          <a href="./index.html" class="logo link"><span class="logo-web">Web</span>Studio</a>
+      <div class="container header__container">
+          <a class="logo link header__logo" href="./index.html">Web<span class="logo logo--darkmode">Studio</span></a>
+
           <button class="mobile-menu-btn btn" type="button" data-menu-button>
-            <svg class="mobile-menu-icon" width="24" height="16">
-                <use class="mobile-menu-open" href="./images/svg/sprite.svg#icon-menu"></use>
-                <use class="mobile-menu-close" href="./images/svg/sprite.svg#icon-close-menu"></use>
-            </svg>
-        </button>
-          <ul class="nav__list">
-            <li  class="nav__item">
-              <a href="./index.html" class="nav__link nav__link--current link">Студія</a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link link">Портфоліо</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link link">Контакти</a>
-            </li>
+              <svg class="mobile-menu-icon" width="24" height="16">
+                  <use class="mobile-menu-open" href="./images/icons.svg#icon-menu"></use>
+                  <use class="mobile-menu-close" href="./images/icons.svg#icon-close-menu"></use>
+              </svg>
+          </button>
+
+          <nav class="nav">
+              <ul class="nav__list list">
+                  <li class="nav__item">
+                      <a class="nav__link link nav__link--current" href="./index.html">Студія</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link link" href="./portfolio.html">Портфоліо</a></li>
+                  <li class="nav__item"><a class="nav__link link" href="">Контакти</a></li>
+              </ul>
+          </nav>
+
+          <ul class="contacts list">
+              <li class="contacts__item">
+                  <a class="contacts__link link" href="mailto:info@devstudio.com">
+                      <svg class="contacts__icon mail" width="16" height="12">
+                          <use href="./images/icons.svg#icon-mail"></use>
+                      </svg>
+                      info@devstudio.com
+                  </a>
+              </li>
+              <li class="contacts__item">
+                  <a class="contacts__link link" href="tel:+380961111111">
+                      <svg class="contacts__icon tel" width="10" height="16">
+                          <use href="./images/icons.svg#icon-smartphone"></use>
+                      </svg>
+                      +38 096 111 11 11
+                  </a>
+              </li>
           </ul>
-        </nav>
-        <ul class="contacts">
-            <li class="contacts__item">
-              <a href="mailto:info@devstudio.com" class="contacts__link link">
-              <svg class="contacts__mail--svg" { width="16" height="12">
-                <use href="./images/icons.svg#icon-mail">
-                </use>
-              </svg>info@devstudio.com</a>
-            </li>
-            <li class="contacts__item">
-              <a href="tel:+380961111111" class="contacts__link link"><svg class="contacts__smartphone--svg" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone">
-                </use>
-              </svg>+38 096 111 11 11</a>
-            </li>
+      </div>
+    </header>
+
+    <main>
+      <!-- Mobile menu -->
+      <div class="mobile-menu" data-menu>
+        <ul class="mobile-menu-nav list">
+          <li class="mobile-menu-nav__item">
+              <a class="mobile-menu-nav__link mobile-menu-nav__link--current link" href="./index.html">Студія</a>
+          </li>
+          <li class="mobile-menu-nav__item">
+              <a class="mobile-menu-nav__link link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mobile-menu-nav__item">
+              <a class="mobile-menu-nav__link link" href="">Контакты</a>
+          </li>
+        </ul>   
+        <ul class="mobile-menu-contacts list">
+          <li class="mobile-menu-contacts__item">
+              <a class="mobile-menu-contacts__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-menu-contacts__item">
+              <a class="mobile-menu-contacts__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-socials list">
+          <li class="mobile-menu-socials__item">
+              <a class="mobile-menu-socials__link link" href="">Instagram</a>
+          </li>
+          <li class="mobile-menu-socials__item">
+              <a class="mobile-menu-socials__link link" href="">Twitter</a>
+          </li>
+          <li class="mobile-menu-socials__item">
+              <a class="mobile-menu-socials__link link" href="">Facebook</a>
+          </li>
+          <li class="mobile-menu-socials__item">
+              <a class="mobile-menu-socials__link link" href="">LinkedIn</a>
+          </li>
         </ul>
       </div>
-    </header> -->
-    <main>
-
       <!-- Секція hero -->
 
       <section class="hero">
@@ -136,7 +174,7 @@
               </form>
             </div>
         </div>  
-        </section> -->
+        </section>
 
       <!-- Секція strange -->
 
@@ -223,7 +261,7 @@
           </li>
         </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Секція Наша команда  -->
 
@@ -437,7 +475,7 @@
           </li>
         </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Секція Постійні клієнти -->
 
@@ -501,7 +539,7 @@
     <footer class="footer">
       <div class="footer-main conteiner">
         <div class="footer-logo-addres">
-          <a href="./index.html" class="link logo-web-footer"><span class="logo-web">Web</span>Studio</a>
+          <a href="./index.html" class="link logo logo--lightmode"><span class="logo">Web</span>Studio</a>
           <address class="addres">
           <ul class="footer-list">
           <li class="footer-item">
@@ -575,7 +613,8 @@
             </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
