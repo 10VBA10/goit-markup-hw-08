@@ -1,6 +1,7 @@
 /* STRANGE */
 .strange {  
     // @extend %section;
+
     padding-top: 60px;
     padding-bottom: 60px;
     
@@ -11,8 +12,8 @@
 
 }
 .strange__list {
+  
     --items: 1;
-
     @media screen and (min-width: 768px) {
       --items: 2;
   }
@@ -23,9 +24,7 @@
 
   @include list;
   }
-  // .strange__list .strange__item + .strange__item {
-  //   margin-left: 30px;
-  // }
+  
   .strange__icons {
     display: flex;
     text-align: center;
@@ -53,6 +52,7 @@
     line-height: 1.17;
     text-align: center;
     justify-content: center;
+    
     @media screen and (min-width: 480px) {
       display: flex;
       justify-content: center;

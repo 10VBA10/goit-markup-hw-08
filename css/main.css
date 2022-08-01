@@ -835,8 +835,8 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   padding: 40px;
   background-color: var(--primary-bg-color);
   border-radius: 5px;
@@ -849,6 +849,12 @@ address {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .sign-up-form-field {
